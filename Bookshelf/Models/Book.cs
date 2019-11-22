@@ -8,6 +8,9 @@ namespace Bookshelf.Models
 {
     public class Book
     {
+        
+        [Required]
+        public int Id { get; set; }
         [Required]
         [MaxLength(13)]
         [MinLength(10)]
@@ -22,6 +25,7 @@ namespace Bookshelf.Models
         public DateTime PublishDate { get; set; }
 
         public int AuthorId { get; set; }
+
         public Author Author { get; set; }
         public ApplicationUser Owner { get; set; } 
 
